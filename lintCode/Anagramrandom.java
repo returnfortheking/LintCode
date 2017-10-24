@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
 
 public class Anagramrandom {
-	public ArrayList<String> anagrams(String[] strs) {
+	private ArrayList<String> anagrams(String[] strs) {
         // write your code here
 		if(strs==null||strs.length==0)
 		{
