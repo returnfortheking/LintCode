@@ -1,4 +1,5 @@
-/*author:ReturnOfTheKing
+/* 
+ * author:ReturnOfTheKing
  * 
  * 删除元素
  * 给定一个数组和一个值，在原地删除与值相同的数字，返回新数组的长度。
