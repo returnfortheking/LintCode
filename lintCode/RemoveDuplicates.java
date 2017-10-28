@@ -15,7 +15,6 @@ package lintCode;
 
 public class RemoveDuplicates {
     public int removeDuplicates(int[] nums) {
-        // 第一个方法时间超了。 
     	if(0==nums.length||null==nums)
     	{
     		return 0;
