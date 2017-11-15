@@ -11,27 +11,54 @@
  */
 package lintCode;
 
+import java.util.HashMap;
+
 public class TwoSum {
-    public int[] twoSum(int[] numbers, int target) {
+    public int[] twoSum(int[] nums, int target) {
         // 时间复杂度n和nlogn尚待完成。
 //    	int[] B=new int[numbers.length];
 //    	for(int i=0;i<numbers.length;i++)
 //    	{
 //    		numbers[]=target-numbers[i];
 //    	}
-        int[] two=new int[2];
-        for(int i=0;i<numbers.length-1;i++)
+    	//1.n^2时间复杂度。
+//        int[] two=new int[2];
+//        for(int i=0;i<nums.length-1;i++)
+//        {
+//            for(int j=i+1;j<nums.length;j++)
+//            {
+//                if(target==(nums[i]+nums[j]))
+//                {
+//                    two[0]=i+1;
+//                    two[1]=j+1;
+//                }
+//            }
+//        }
+//        return two;
+        //2.n时间复杂度
+        HashMap<Integer,Integer> h=new HashMap<Integer,Integer>();
+        int[] A=new int[2];
+        for(int i=0;i<nums.length;i++)
         {
-            for(int j=i+1;j<numbers.length;j++)
-            {
-                if(target==(numbers[i]+numbers[j]))
-                {
-                    two[0]=i+1;
-                    two[1]=j+1;
-                }
-            }
+            h.put(target-nums[i],i);
         }
-        return two;
+        for(int j=0;j<nums.length;j++)
+        {
+        	if(null!=h.get(nums[j])&&j!=h.get(nums[j]))
+        	{
+        		if(j>h.get(nums[j]))
+        		{
+        			A[0]=h.get(nums[j]);
+        			A[1]=j;
+                    break;
+        		}else{
+        			A[0]=j;
+        			A[1]=h.get(nums[j]);
+                    break;
+        		}
+        	}
+        }
+        return A;
     }
 
 	public static void main(String[] args) {

@@ -16,12 +16,17 @@ import java.util.TreeSet;
 
 public class FindMin {
     public int findMin(int[] nums) {
-    	TreeSet<Integer> l=new TreeSet<Integer>();
-    	for(int i:nums)
-    	{
-    		l.add(i);
-    	}
-    	return l.first();
+//    	TreeSet<Integer> l=new TreeSet<Integer>();
+//    	for(int i:nums)
+//    	{
+//    		l.add(i);
+//    	}
+//    	return l.first();
+    	int l=0;
+    	int r=nums.length-1;
+    	int mid=-1;
+    	while()
+    	
     }
     public static void main(String[] args) {
 		FindMin f=new FindMin();
