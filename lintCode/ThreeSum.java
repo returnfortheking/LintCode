@@ -1,5 +1,5 @@
 /*
- * author:ReturnOfTheKing
+ * Author:ReturnOfTheKing
  * 
  * 三数之和
  * 
